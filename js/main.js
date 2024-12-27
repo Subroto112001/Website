@@ -78,3 +78,17 @@ Prev.addEventListener("click", () => {
   counter--;
   imageSlide();
 });
+
+
+// timer js code
+
+
+const Timer__Show = document.querySelector(".Timer__Show");
+
+let timer = 0
+let interval = setInterval(() => {
+    Timer__Show.innerHTML = timer++;
+    if (timer > 30) {
+        clearInterval(interval);
+    }
+}, 1000)
